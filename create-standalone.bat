@@ -21,12 +21,15 @@ xcopy .\Build_CMake\LuxCore\lib\pyluxcoretools.zip %DIR%
 
 :: Copy DLLs from WindowsCompileDeps (assuming it is in same folder as WindowsCompile)
 xcopy ..\WindowsCompileDeps\x64\Release\lib\OpenImageDenoise.dll %DIR%
+xcopy ..\WindowsCompileDeps\x64\Release\lib\oidnDenoise.exe %DIR%
 xcopy ..\WindowsCompileDeps\x64\Release\lib\embree3.dll %DIR%
 xcopy ..\WindowsCompileDeps\x64\Release\lib\tbb.dll %DIR%
 xcopy ..\WindowsCompileDeps\x64\Release\lib\tbbmalloc.dll %DIR%
 xcopy ..\WindowsCompileDeps\x64\Release\lib\OpenImageIO.dll %DIR%
+xcopy ..\WindowsCompileDeps\x64\Release\lib\nvrtc64*.dll %DIR%
+xcopy ..\WindowsCompileDeps\x64\Release\lib\nvrtc-builtins*.dll %DIR%
 
-:: Copy addition files from LuxCore (assuming it is in same folder as WindowsCompile)
+:: Copy additional files from LuxCore (assuming it is in same folder as WindowsCompile)
 xcopy ..\LuxCore\README.md %DIR%
 xcopy ..\LuxCore\COPYING.txt %DIR%
 xcopy ..\LuxCore\AUTHORS.txt %DIR%
